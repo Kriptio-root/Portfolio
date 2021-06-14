@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KostyaCourseSite</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <!-- <button data-modal>hello</button> -->
+    <div class="all">
+      <input checked type="radio" name="respond" id="desktop" />
+      <article id="slider">
+        <input checked type="radio" name="slider" id="switch1" />
+        <input type="radio" name="slider" id="switch2" />
+        <input type="radio" name="slider" id="switch3" />
+        <input type="radio" name="slider" id="switch4" />
+        <input type="radio" name="slider" id="switch5" />
+        <div id="slides">
+          <div id="overflow">
+            <div class="image">
+              <a href="#okno">
+                <article id="HTML">
+                  <img src=" 1.jpg" />
+                </article>
+              </a>
+              <a href="#okno">
+                <article id="SCSS"><img src="2.jpg" /></article>
+              </a>
+              <a href="#okno">
+                <article id="JS"><img src="3.jpg" /></article>
+              </a>
+              <a href="#okno">
+                <article id="JAVA"><img src="4.jpg" /></article>
+              </a>
+              <a href="#okno">
+                <article id="C"><img src="5.jpg" /></article>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="controls">
+          <label for="switch1"></label>
+          <label for="switch2"></label>
+          <label for="switch3"></label>
+          <label for="switch4"></label>
+          <label for="switch5"></label>
+        </div>
+        <div id="active">
+          <label for="switch1"></label>
+          <label for="switch2"></label>
+          <label for="switch3"></label>
+          <label for="switch4"></label>
+          <label for="switch5"></label>
+        </div>
+      </article>
+    </div>
+    <div id="okno">
+      Popup!<br />
+      <a id="closelink" href="#" class="close">Close Window</a>
+    </div>
+
+    <a href="#okno">call popup</a>
+    <script>
+      // var closewinf = document.getElementById("closelink");
+      var doclist = document.getElementById("okno");
+      /*       var objSpan = document.getElementById("HTML");
+      objSpan.addEventListener("click", function () {
+        delSubj(this.id);
+      }); */
+
+      function delSubj(objId) {
+        console.log(objId);
+      }
+      HTML.onclick = function () {
+        var valhtml = this.id;
+        myb = document.createElement("a");
+        myb = `<a id="closelink" href="#" class="close">Close popup</a>`;
+        console.log(myb);
+        console.log(valhtml);
+        doclist.innerHTML = `Congratulations! You have just ordered a ${valhtml} course! ${myb} `;
+        //document.getElementById("okno").innerHTML += myb;
+      };
+
+      SCSS.onclick = function () {
+        var valhtml = this.id;
+        myb = document.createElement("a");
+        myb = `<a id="closelink" href="#" class="close">Close popup</a>`;
+        console.log(myb);
+        console.log(valhtml);
+        doclist.innerHTML = `Congratulations! You have just ordered a ${valhtml} course! ${myb} `;
+        //document.getElementById("okno").innerHTML += myb;
+      };
+      JAVA.onclick = function () {
+        var valhtml = this.id;
+        myb = document.createElement("a");
+        myb = `<a id="closelink" href="#" class="close">Close popup</a>`;
+        console.log(myb);
+        console.log(valhtml);
+        doclist.innerHTML = `Congratulations! You have just ordered a ${valhtml} course! ${myb} `;
+        //document.getElementById("okno").innerHTML += myb;
+      };
+      JS.onclick = function () {
+        var valhtml = this.id;
+        myb = document.createElement("a");
+        myb = `<a id="closelink" href="#" class="close">Close popup</a>`;
+        console.log(myb);
+        console.log(valhtml);
+        doclist.innerHTML = `Congratulations! You have just ordered a ${valhtml} course! ${myb} `;
+        //document.getElementById("okno").innerHTML += myb;
+      };
+      C.onclick = function () {
+        var valhtml = this.id;
+        myb = document.createElement("a");
+        myb = `<a id="closelink" href="#" class="close">Close popup</a>`;
+        console.log(myb);
+        console.log(valhtml);
+        doclist.innerHTML = `Congratulations! You have just ordered a ${valhtml} course! ${myb} `;
+        //document.getElementById("okno").innerHTML += myb;
+      };
+    </script>
+  </body>
+</html>

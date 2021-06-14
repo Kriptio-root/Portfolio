@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>About Us</title>
+    <script>
+        //datePicker
+        $(function () {
+            var dateFormat = "mm/dd/yy",
+                from = $("#from")
+                .datepicker({
+                    showOn: "button",
+                    buttonImage: "img/calendar.gif",
+                    buttonImageOnly: true,
+                    buttonText: "Select date",
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 2,
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    showButtonPanel: true,
+                    changeMonth: true,
+                    changeYear: true,
+                })
+                .on("change", function () {
+                    to.datepicker("option", "minDate", getDate(this));
+                }),
+                to = $("#to").datepicker({
+                    showOn: "button",
+                    buttonImage: "img/calendar.gif",
+                    buttonImageOnly: true,
+                    buttonText: "Select date",
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 2,
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    showButtonPanel: true,
+                    changeMonth: true,
+                    changeYear: true
+                })
+                .on("change", function () {
+                    from.datepicker("option", "maxDate", getDate(this));
+                });
+
+            function getDate(element) {
+                var date;
+                try {
+                    date = $.datepicker.parseDate(dateFormat, element.value);
+                } catch (error) {
+                    date = null;
+                }
+
+                return date;
+            }
+        });
+        $(document).ready(function () {
+            $("#from").focus(function () {
+                $("#from").datepicker("show");
+            });
+            $("#to").focus(function () {
+                $("#to").datepicker("show");
+            });
+            $("#from").focus();
+            $("#to").focus();
+        });
+        $(function () {
+            $("#from").datepicker();
+            $("#anim").on("change", function () {
+                $("#from").datepicker("option", "showAnim", $(this).val());
+                $("#to").datepicker("option", "showAnim", $(this).val());
+            });
+        });
+        //Autocomplite
+        $(function () {
+            var availableTags = [
+                "Kenwood",
+                "Sony",
+                "Philips",
+                "Smasung",
+                "BQ",
+                "LG",
+                "Siemens",
+                "GoldLine",
+                "Sharp",
+                "Hiesense"
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="page-header__container">
+                <a href="index.html" class="logo logo--viev">
+                    <img src="img/logo.png" alt="logo" class="logo__img">
+                </a>
+            </div>
+        </header>
+        <nav class="page-nav">
+            <div class="page-nav__container">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="index.html">Home
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="AboutUs.html">About Us
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="ContactUs.html">Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <main class="page-main">
+            <div class="form-wrapper">
+                <form class="contactus contactus--decor">
+                    <div class="contactus__inner">
+                        <div class="contactus__inner-header--wrapper">
+                            <h3 clas="contactus__inner-header">Написать нам</h3>
+                        </div>
+                        <input class="contactus__inner-item contactus__inner-username" type="text"
+                            placeholder="Username">
+                        <input class="contactus__inner-item contactus__inner-email" type="email" placeholder="Email">
+                        <textarea class="contactus__inner-item contactus__inner-textarea" placeholder="Сообщение..."
+                            rows="3"></textarea>
+                        <input class="contactus__inner-item contactus__inner-submit" type="submit" value="Отправить">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <aside class="page-related-links">
+            <div class="calendar">
+                <label for="from">From</label>
+                <input type="text" id="from" name="from">
+                <label for="to">to</label>
+                <input type="text" id="to" name="to">
+                <p class="calendar_anim">Animations:<br>
+                    <select id="anim">
+                        <option value="show">Show (default)</option>
+                        <option value="slideDown">Slide down</option>
+                        <option value="fadeIn">Fade in</option>
+                        <option value="blind">Blind (UI Effect)</option>
+                        <option value="bounce">Bounce (UI Effect)</option>
+                        <option value="clip">Clip (UI Effect)</option>
+                        <option value="drop">Drop (UI Effect)</option>
+                        <option value="fold">Fold (UI Effect)</option>
+                        <option value="slide">Slide (UI Effect)</option>
+                        <option value>None</option>
+                    </select>
+                </p>
+            </div>
+            <div class="search ui-widget">
+                <label for="tags">Brands: </label>
+                <input id="tags">
+            </div>
+        </aside>
+        <footer class="page-footer page-footer--viev">
+            <div class="page-footer__container">
+                <div class="page-footer__content">
+                    <ul class="page-footer-links-social page-footer-links-social--viev">
+                        <li><a class="page-footer-links-social--facebook page-footer-links-social--viev--element"
+                                href="https://www.facebook.com/"></a></li>
+                        <li><a class="page-footer-links-social--youtube page-footer-links-social--viev--element"
+                                href="https://www.youtube.com/"></a></li>
+                        <li><a class="page-footer-links-social--vk page-footer-links-social--viev--element"
+                                href="https://www.vk.com/"></a></li>
+                        <li><a class="page-footer-links-social--insta page-footer-links-social--viev--element"
+                                href="https://www.instagram.com/"></a></li>
+                    </ul>
+                    <p class="page-footer__cory-right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut,
+                        totam tempore consequatur distinctio, blanditiis hic cupiditate dolores ex sed minima veniam
+                        amet tempora ipsa quidem consectetur eveniet ratione maxime facilis.</p>
+                    <p class="page-footer__currnt-year">2020</p>
+                </div>
+            </div>
+    </div>
+    </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+<header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top-inner">
+                <nav class="menu">
+                    <button class="menu__btn">
+                        <div class="menu__btn-line"></div>
+                        <div class="menu__btn-line"></div>
+                        <div class="menu__btn-line"></div>
+                    </button>
+                    <ul class="menu__list">
+                        <li class="menu__item"><a
+                                class="menu__link" href="#">Stores
+                        </a>
+                        </li>
+                        <li class="menu__item">
+                            <a
+                                    class="menu__link" href="#">Sales
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a
+                                    class="menu__link" href="#">Shipment and payment
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="logo" class="logo__img">
+                </a>
+                <div class="header__box">
+                    <p class="header__address">
+                        Tel-Aviv str. Dizengoff 205
+                    </p>
+                    <ul class="user-list">
+                        <li class="user-list__item">
+                            <a href="#" class="user-list__link"><img src="img/favorite.svg" alt="heart"></a>
+                        </li>
+                        <li class="user-list__item">
+
+                            <a href="#" class="user-list__link"><img src="img/user.svg" alt="user"></a>
+                        </li>
+                        <li class="user-list__item">
+
+                            <a href="#" class="user-list__link bucket"><img src="img/buscket.svg" alt="buscket">
+                                <p class="bucket__num">1</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="menu-mobile-list">
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <img class="menu-mobile-img" src="img/mobile/mobile_menu/User.svg" alt="">
+                <p>Login</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <img class="menu-mobile-img" src="img/mobile/mobile_menu/User.svg" alt="">
+                <p>Registration</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <img class="menu-mobile-img" src="img/mobile/mobile_menu/heart.png" alt="">
+                <p>Favorites</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <img class="menu-mobile-img" src="img/mobile/mobile_menu/basket.png" alt="">
+                <p>Basket</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <img class="menu-mobile-img" src="img/mobile/mobile_menu/store.png" alt="">
+                <p>Our stores</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <img class="menu-mobile-img" src="img/mobile/mobile_menu/Sale.png" alt="">
+                <p>Sale</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <img class="menu-mobile-img" src="img/mobile/mobile_menu/delivery.png" alt="">
+                <p>Shipment&Payment</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <p>ATV</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <p>Jet Ski</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <p>Boats</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <p>Snow Bike</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <p>Buggy</p>
+            </a>
+        </li>
+        <li class="menu-mobile-item">
+            <a class="menu-mobile-link" href="#">
+                <p>Engine</p>
+            </a>
+        </li>
+
+    </ul>
+    <div class="menu__mobile-line--wrapper">
+        <ul class="menu__mobile-line">
+            <li class="menu__item"><a
+                    class="menu__link" href="#">Stores
+            </a>
+            </li>
+            <li class="menu__item">
+                <a
+                        class="menu__link" href="#">Sales
+                </a>
+            </li>
+            <li class="menu__item">
+                <a
+                        class="menu__link" href="#">Shipment and payment
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="header__bottom">
+        <div class="container">
+            <ul class="menu-categories">
+                <li class="menu-categories__item">
+                    <a href="#" class="menu-categories__link">ATV</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a href="#" class="menu-categories__link">Motorized Boat</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a href="#" class="menu-categories__link">Jet Ski </a>
+                </li>
+                <li class="menu-categories__item">
+                    <a href="#" class="menu-categories__link">Boats</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a href="#" class="menu-categories__link">Buggy</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a href="#" class="menu-categories__link">Snow Bike</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a href="#" class="menu-categories__link">Engines</a>
+                </li>
+                <li class="menu-categories__item">
+                    <a href="#" class="menu-categories__link">Parts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__inner">
+        <ul class="breadcrumbs__list mobile-overflow">
+            <li class="breadcrumbs__list-item"><a href="" hreaf="#">Main</a></li>
+            <li class="breadcrumbs__list-item"><a href="" hreaf="#"> Jet Ski</a></li>
+        </ul>
+        </div>
+    </div>
+</div>
+
+<section class="catalog">
+    <div class="container">
+        <h2 class="catalog__title"> Jet Ski</h2>
+        <div class="catalog__filter">
+            <div class="catalog__filter-itemsinner">
+                <div class="catalog__filter-items mobile-overflow">
+                    <button>Characteristic</button>
+                    <button>Characteristic</button>
+                    <button>Characteristic</button>
+                    <button>More</button>
+                </div>
+            </div>
+
+            <div class="catalog__filter-btn">
+                <select class="filter-style select-item" name="" id="">
+                    <option value="">Popularity</option>
+                    <option value="">Price grow</option>
+                    <option value="">Price reduce</option>
+                </select>
+                <button class="catalog__filter-btngrid catalog__filter-button catalog__filter-button--active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21">
+                        <defs>
+                            <clipPath id="enuqa">
+                                <path fill="#fff" d="M0 0h23v21H0z"/>
+                            </clipPath>
+                            <clipPath id="enuqb">
+                                <path fill="#fff" d="M6 5h4v4H6z"/>
+                            </clipPath>
+                            <clipPath id="enuqc">
+                                <path fill="#fff" d="M6 12h4v4H6z"/>
+                            </clipPath>
+                            <clipPath id="enuqd">
+                                <path fill="#fff" d="M13 5h4v4h-4z"/>
+                            </clipPath>
+                            <clipPath id="enuqe">
+                                <path fill="#fff" d="M13 12h4v4h-4z"/>
+                            </clipPath>
+                        </defs>
+                        <g>
+                            <g>
+                                <g>
+                                    <path fill="none" stroke="#2f3035" stroke-miterlimit="20" stroke-width="4"
+                                          d="M0 0v0h23v21H0v0z" clip-path="url(&quot;#enuqa&quot;)"/>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path fill="#2f3035" d="M6 5h4v4H6z"/>
+                                        <path fill="none" stroke="#2f3035" stroke-miterlimit="20" stroke-width="4"
+                                              d="M6 5v0h4v4H6v0z" clip-path="url(&quot;#enuqb&quot;)"/>
+                                    </g>
+                                    <g>
+                                        <path fill="#2f3035" d="M6 12h4v4H6z"/>
+                                        <path fill="none" stroke="#2f3035" stroke-miterlimit="20" stroke-width="4"
+                                              d="M6 12v0h4v4H6v0z" clip-path="url(&quot;#enuqc&quot;)"/>
+                                    </g>
+                                    <g>
+                                        <path fill="#2f3035" d="M13 5h4v4h-4z"/>
+                                        <path fill="none" stroke="#2f3035" stroke-miterlimit="20" stroke-width="4"
+                                              d="M13 5v0h4v4h-4v0z" clip-path="url(&quot;#enuqd&quot;)"/>
+                                    </g>
+                                    <g>
+                                        <path fill="#2f3035" d="M13 12h4v4h-4z"/>
+                                        <path fill="none" stroke="#2f3035" stroke-miterlimit="20" stroke-width="4"
+                                              d="M13 12v0h4v4h-4v0z" clip-path="url(&quot;#enuqe&quot;)"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <button class="catalog__filter-btnline catalog__filter-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="19" viewBox="0 0 25 19">
+                        <g>
+                            <g opacity="1">
+                                <g opacity="1">
+                                    <g opacity="1">
+                                        <path fill="#2f3035"
+                                              d="M6 1.5A1.5 1.5 0 0 1 7.5 0h16a1.5 1.5 0 0 1 0 3h-16A1.5 1.5 0 0 1 6 1.5z"/>
+                                    </g>
+                                    <g opacity="1">
+                                        <path fill="#2f3035"
+                                              d="M6 9.5A1.5 1.5 0 0 1 7.5 8h16a1.5 1.5 0 0 1 0 3h-16A1.5 1.5 0 0 1 6 9.5z"/>
+                                    </g>
+                                    <g opacity="1">
+                                        <path fill="#2f3035"
+                                              d="M6 17.5A1.5 1.5 0 0 1 7.5 16h16a1.5 1.5 0 0 1 0 3h-16A1.5 1.5 0 0 1 6 17.5z"/>
+                                    </g>
+                                </g>
+                                <g opacity="1">
+                                    <g opacity="1">
+                                        <path fill="#2f3035" d="M0 1.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 1 1-3 0z"/>
+                                    </g>
+                                    <g opacity="1">
+                                        <path fill="#2f3035" d="M0 9.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 1 1-3 0z"/>
+                                    </g>
+                                    <g opacity="1">
+                                        <path fill="#2f3035" d="M0 17.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 1 1-3 0z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="catalog__inner">
+            <div class="aside__btn">
+                Filter
+            </div>
+            <aside class="catalog__inner-aside aside-filter">
+                <div class="tabs-wrapper tabs-wrapper--no-scroll">
+                    <div class="tabs aside-filter__tabs">
+                        <a class="tab aside-filter__tab  tab--active" href='#filter-1'><span>Parameters</span></a>
+                        <a class="tab  aside-filter__tab" href='#filter-2'><span>Manifacturer</span></a>
+                    </div>
+                    <div class="tabs-container">
+                        <div id="filter-1" class="tabs-content aside-filter__tabs-content tabs-content--active">
+                            <form class="aside-filter__form">
+                                <ul class="aside-filter__list">
+
+                                    <li class="aside-filter__item-drop">
+                                        <p
+                                                class="aside-filter__item-title filter__item-drop filter__item-drop--active">
+                                            Stock</p>
+                                        <div class="aside-filter__content">
+                                            <div class="aside-filter__content-box">
+                                                <label class="aside-filter__content-label"><input
+                                                        class="filter-style" type="checkbox" checked>In stock</label>
+                                            </div>
+                                            <div class="aside-filter__content-box">
+                                                <label class="aside-filter__content-label"><input
+                                                        class="filter-style" type="checkbox" checked>Order Only</label>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="aside-filter__item-drop">
+                                        <p
+                                                class="aside-filter__item-title filter__item-drop filter__item-drop--active">
+                                            New</p>
+                                        <div class="aside-filter__content aside-filter__content--radio">
+                                            <div class="aside-filter__content-box">
+                                                <label class="aside-filter__content-label"><input
+                                                        class="filter-style" name="radio" type="radio"
+                                                        checked>All</label>
+                                            </div>
+                                            <div class="aside-filter__content-box">
+                                                <label class="aside-filter__content-label"><input
+                                                        class="filter-style" name="radio" type="radio">New</label>
+                                            </div>
+                                            <div class="aside-filter__content-box">
+                                                <label class="aside-filter__content-label"><input
+                                                        class="filter-style" name="radio" type="radio">Sale</label>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="aside-filter__item-drop">
+                                        <p
+                                                class="aside-filter__item-title filter__item-drop filter__item-drop--active">
+                                            Price</p>
+                                        <div class="range__wrapper">
+                                            <div class="range-slider">
+                                                <input type="text" class="js-range-slider" value=""/>
+                                                <div class="range__price-wrapper">
+                                                    <label
+                                                            class="range__price-label price-label--twoprice-label--one"
+                                                            for="range_from_price">From:</label><input
+                                                        id="range_from_price" type="text"
+                                                        class="js-input-from range__price" value="0"/>
+                                                    <label class="range__price-label range__price-label--two"
+                                                           for="range_untill_price">To:</label><input
+                                                        id="range_untill_price" type="text"
+                                                        class="js-input-to range__price" value="0"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="aside-filter__item-list">
+                                        <div class="filter__item-list">
+                                            <p class="filter__item-listtitle">
+
+                                                Power, h.p.
+                                            </p>
+                                            <select class="filter-style filter__item-listselect">
+                                                <option>90</option>
+                                                <option>130</option>
+                                                <option>154</option>
+                                                <option>230</option>
+                                                <option>300</option>
+                                            </select>
+                                        </div>
+                                        <div class="filter__item-list">
+                                            <p class="filter__item-listtitle">
+
+                                                Engine power, h.p.
+                                            </p>
+                                            <select class="filter-style filter__item-listselect">
+                                                <option>90</option>
+                                                <option>130</option>
+                                                <option>154</option>
+                                                <option>230</option>
+                                                <option>300</option>
+                                            </select>
+                                        </div>
+                                        <div class="filter__item-list">
+                                            <p class="filter__item-listtitle">
+                                                Max speed
+                                            </p>
+                                            <select class="filter-style filter__item-listselect">
+                                                <option>90</option>
+                                                <option>130</option>
+                                                <option>154</option>
+                                                <option>230</option>
+                                                <option>300</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="aside-filter__item">
+                                        <p
+                                                class="aside-filter__item-title filter__item-drop filter__item-drop--active">
+                                            Model</p>
+                                        <div class="aside-filter__content">
+                                            <input class="filter-search" type="text"
+                                                   placeholder="Enter model you are search for here">
+                                        </div>
+                                    </li>
+                                    <li class="aside-filter__item">
+                                        <button class="search__content-button">Accept filter</button>
+                                        <button class="filter-btn__reset">Drop filter</button>
+                                    </li>
+                                    <!-- <li class="aside-filter__item"></li>
+                                    <li class="aside-filter__item"></li>  -->
+                                </ul>
+                            </form>
+                        </div>
+                        <div id="filter-2" class="tabs-content aside-filter__tabs-content">
+                            content-2
+                            <ul>
+                                <li class="aside-filter__item">
+                                    <button class="search__content-button">Accept filter</button>
+                                    <button class="filter-btn__reset">Drop filter</button>
+                                </li>
+                                <!-- <li class="aside-filter__item"></li>
+                                <li class="aside-filter__item"></li>  -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <div class="catalog__inner-list">
+                <!-- 1 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img'
+                             src="img/catalog/Gidroitem/gidrotsikl-brp-seadoo-gti-130hp-se-blackmango-orange-73936232995706_small6_1.png"
+                             alt="">
+                        <h4 class="product-item__title"> Jet Ski BRP SeaDoo GTI 130hp SE Black\Mango</h4>
+                        <p class="price product-item__price">1 049 500 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 2 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item product-item--sale' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/2.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski BRP SeaDoo GTI 155hp SE Long Blue Metallic</h4>
+                        <p class="price product-item__price">1 100 475 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 3 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/3.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski BRP SeaDoo GTR 230hp X California green </h4>
+                        <p class="price product-item__price">1 323 700 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 4 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item product-item--sale' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/4.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski BRP SeaDoo GTR 230hp STD Black / Gulfstream</h4>
+                        <p class="price product-item__price">1 323 700 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 5 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/5.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski BRP SeaDoo GTX 300hp LTD Liquid Metal</h4>
+                        <p class="price product-item__price">1 543 000 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 6 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item product-item--sale' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/6.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski BRP SeaDoo Spark 60hp 2 up</h4>
+                        <p class="price product-item__price">732 345 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 7 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/7.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski BRP SeaDoo Spark GTS 90hp Rental</h4>
+                        <p class="price product-item__price">857 666 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 8 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Соо__img</span></a>
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item product-item--sale' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/8.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski Spark 2-UP 900 Ho Ace Pineapple </h4>
+                        <p class="price product-item__price">587 440 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 9 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Соо__img</span></a>
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item product-item--sale' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/10.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski Spark 2-UP 900 Ho Ace Pineapple </h4>
+                        <p class="price product-item__price">587 440 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 10 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/10.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski BRP Sea-doo Spark 2-UP 900 Ace Vanilla </h4>
+                        <p class="price product-item__price">1 049 500 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 11 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/11.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski BRP Sea-doo Spark 2-UP 900 Ace Vanilla </h4>
+                        <p class="price product-item__price">1 049 500 $</p>
+                        <p class="product-item__notify-text">Out of stock</p>
+                    </a>
+                </div>
+                <!-- 12 -->
+                <div class="product-item__wrapper">
+                    <button class='product-item__favorite'></button>
+                    <button class='product-item__busket'>
+                        <img src="img/buscket-white.svg" alt="">
+                    </button>
+                    <a class="product-item__notify-link" href="#"><span>Report add to stock</span></a>
+                    <a class='product-item product-item--sale' href="#">
+                        <p class="product-item__hover-text">
+                            Viev product details
+                        </p>
+                        <img class='product-item__img' src="img/catalog/Gidroitem/12.png" alt="">
+                        <h4 class="product-item__title"> Jet Ski Spark 3-UP 900 HO Ace IBR Blueberry</h4>
+                        <p class="price product-item__price">1 049 500 $</p>
+                        <p class="product-item__notify-text">Out of stock
+                        </p>
+                    </a>
+                </div>
+                <div class="pagination">
+                    <ul class="pagination-list">
+                        <li class="pagination-list__item active"><a href=""><span href="#"></span>1</a></li>
+                        <li class="pagination-list__item"><a href=""><span href="#"></span>2</a></li>
+                        <li class="pagination-list__item"><a href=""><span href="#"></span>3</a></li>
+                        <li class="pagination-list__item"><a href=""><span href="#"></span>4</a></li>
+                        <li class="pagination-list__item"><a href=""><span href="#"></span>5</a></li>
+                        <li class="pagination-list__item pagination-list__item--dots"><a href=""><span
+                                href="#"></span>...</a></li>
+                        <li class="pagination-list__item"><a href=""><span href="#"></span>11</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top-inner">
+                <div class="footer__top-item footer__top-newslatter">
+                    <h6 class="footer__top-title">Subscribe and stay updated with our latest sales!</h6>
+                    <form action="" class="footer-form">
+                        <input class="footer-form__input" type="text" placeholder="Enter your e-mail:">
+                        <button class="footer-form__btn" type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="footer__top-item footer__top-item--itemdrop">
+                    <h6 class="footer__top-title footer__topdrop">Info</h6>
+                    <ul class="footer-list ">
+                        <li class="footer-list-item"><a href="#">About
+
+
+                        </a></li>
+                        <li class="footer-list-item"><a href="#">Contact us</a></li>
+                        <li class="footer-list-item"><a href="#">Sales</a></li>
+                        <li class="footer-list-item"><a href="#"> Our stores</a></li>
+                    </ul>
+                </div>
+                <div class="footer__top-item ">
+                    <h6 class="footer__top-title footer__topdrop">Online store
+
+
+                    </h6>
+                    <ul class="footer-list ">
+                        <li class="footer-list-item"><a href="#">Delivery or self pick-up
+
+
+                        </a></li>
+                        <li class="footer-list-item"><a href="#">Payment</a></li>
+                        <li class="footer-list-item"><a href="#">Product return</a></li>
+                        <li class="footer-list-item"><a href="#"> News</a></li>
+                    </ul>
+                </div>
+                <div class="footer__top-item footer__top-social">
+                    <ul class="footer__top-social-list">
+                        <li class="footer__top-social-list__item"><a href="#"><img src="img/footer/Insta.svg"
+                                                                                   alt=""></a></li>
+                        <li class="footer__top-social-list__item"><a href="#"><img src="img/footer/VK.svg" alt=""></a>
+                        </li>
+                        <li class="footer__top-social-list__item"><a href="#"><img src="img/footer/facebook.svg" alt=""></a>
+                        </li>
+                        <li class="footer__top-social-list__item"><a href="#"><img src="img/footer/youtube.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <a class="footer__bottom-link" href="footer__bottom-link">Terms of used</a>
+            <a class="footer__bottom-link" href="footer__bottom-link">Privacy</a>
+            <a class="footer__bottom-link" href="footer__bottom-link">Cookies</a>
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.rateyo.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
+<!-- <div class="tabs-wrapper">
+    <div class="tabs">
+        <a class="tab tab--active" href='#'></a>
+    </div>
+    <div class="tabs-container">
+        <div class="tabs-content">
+
+        </div>
+    </div>
+</div> -->

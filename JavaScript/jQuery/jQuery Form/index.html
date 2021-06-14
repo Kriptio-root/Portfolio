@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="us">
+
+<head>
+	<meta charset="utf-8">
+	<title>TASK 2.4 Implement jQuery UI Form Widget</title>
+	<script src="external/jquery/jquery.js"></script>
+	<script src="jquery-ui.js"></script>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="body">
+	
+
+	<form class="form" action="">
+		<div class="form__header">
+		<h1 class="form__header-text">One-Way Airlines:Let's make a reservation</h1>
+	</div>
+	<div class="form__content--wrapper">
+	<div class="form__datepicker-text">Pick a departure date</div>
+	<div class="form__datepicker">
+		<input class="form__datepicker-input" type="text" id="datepicker" title="Choose a date for your one-way voyage">
+	</div>
+<!-- <div class="form__search">Find an airport</div> -->
+		<label class="form__search-text" for="tags">Find an airport</label>
+		<div class="ui-widget form__search">
+		<input class="form__search-input" id="tags" title="Choose Airport from the list">
+	</div>
+
+	<!-- Selectmenu -->
+	<div class="form__selectmenu-text">Meal Options</div>
+		<select class="form__selectmenu" id="selectmenu">
+			<option>With meal</option>
+			<option selected="selected">No meal</option>
+		</select>
+
+	<!-- Checkboxradio 1to3 -->
+	<div class="form__radioset-text">Number of bags to check</div>
+		<div class="form__radioset" id="radioset">
+			<input class="radiobtn" type="radio" id="radio1" name="radio"><label for="radio1">1</label>
+			<input class="radiobtn" type="radio" id="radio2" name="radio" checked="checked"><label
+				for="radio2">2</label>
+			<input class="radiobtn" type="radio" id="radio3" name="radio"><label for="radio3">3</label>
+		</div>
+
+	<!-- Checkbox -->
+	<div class="form__checkbox-text">Type of seat you'd like</div>
+	<div class="toggle-wrap form__checkbox">
+		<div class="toggles mytoggles">
+			<label for="color">Aisle</label>
+			<input class="toggle brand-toggle checkbox" type="checkbox" name="color" id="color">
+			<label for="border">Window</label>
+			<input class="toggle checkbox" type="checkbox" name="border" id="border">
+			<label for="background-color">Exit Row</label>
+			<input class="toggle brand-toggle checkbox" type="checkbox" name="background-color" id="background-color"
+				checked>
+			<label for="background-image">Any seat</label>
+			<input class="toggle brand-toggle checkbox" type="checkbox" name="background-image" id="background-image"
+				checked>
+		</div>
+	</div>
+	<div class=""></div>
+				<!-- Button -->
+				<button class="form__button" id="button">Continue reservation process <span class="ui-icon  ui-icon-circle-arrow-e"></span></button>
+</div>
+
+</form>
+	<script>
+		$(function () {
+			$(".checkbox").checkboxradio();
+			$(".radiobtn").checkboxradio();
+			$(".radiobtn").controlgroup();
+
+			$(".checkbox").controlgroup();
+		});
+
+		$(function () {
+			$(".radiobtn").checkboxradio({
+				icon: false
+			});
+			$(".checkbox").checkboxradio({
+				icon: false
+			});
+		});
+
+		var icon = undefined;
+		$("#button").button();
+		$("#radioset").buttonset();
+
+		$("#controlgroup").controlgroup();
+
+		$("#tabs").tabs();
+
+		$("#selectmenu").selectmenu();
+		// Hover states on the static widgets
+		$("#dialog-link, #icons li").hover(
+			function () {
+				$(this).addClass("ui-state-hover");
+			},
+			function () {
+				$(this).removeClass("ui-state-hover");
+			}
+		);
+		//form help
+		$(function () {
+			var tooltips = $("[title]").tooltip({
+				position: {
+					my: "left top",
+					at: "right+5 top-5",
+					collision: "none"
+				}
+			});
+		});
+		//datepicker
+		$(function () {
+			$("#datepicker").datepicker();
+		});
+		//Autocomplite
+		$(function () {
+			var availableTags = [
+				"Tel Aviv",
+				"Kiev",
+				"Eilat",
+				"Lviv"
+			];
+			$("#tags").autocomplete({
+				source: availableTags
+			});
+		});
+	</script>
+</body>
+
+</html>

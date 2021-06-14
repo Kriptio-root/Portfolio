@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <address>מכללת הנדסאים תל אביב</address>
+  <title>KostyaTipCalculator</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body style="background-image: url(img/bar.jpg);background-size:cover;">
+  <main>
+    <section id="content">
+      <aside>
+        <h1>Tip Calculator</h1>
+        <hr />
+        <div>
+          <p>Billing:</p> <input class="number" type="number" name="amount" id="MoneyToPay" placeholder="amount"
+            required pattern="[^0],[0-9]"></br>
+          <select id="percent"> </select></br>
+          <input class="button" type="button" value="Reset button" onclick="reset()"><br>
+          <input class="button" type="button" value="Tip Calculation" onclick="Calculator()"><br>
+          <input id='tipcal' style="background-color: white;" class="text" type="text" name="tip" id="tip"
+            placeholder="tip" disabled><br>
+          <input id='sum' style="background-color: white;" class="text" type="text" name="tip" id="tip"
+            placeholder="Total sum" disabled>
+        </div>
+      </aside>
+    </section>
+    <section>
+    </section>
+  </main>
+</body>
+<script src="../src/js/script.js"></script>
+
+</html>

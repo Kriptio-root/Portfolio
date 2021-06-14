@@ -1,0 +1,81 @@
+@import "font/font";
+@import "reset/reset";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.btn{
+
+  &__inside{
+    position: relative;
+    display: inline;
+    margin-top:4px;
+    margin-left:5px;
+    border-radius:0.85em;
+    border:1px solid rgb(97, 95, 95);
+    background: linear-gradient(360deg,#afb1b1, #e3e4e3 55%);
+    outline:none;
+    cursor:pointer;
+    &--viev{
+      min-width: 280px;
+      min-height: 70px;
+    }
+    &--shadows{
+      box-shadow: 0px 0px 0px 6px #dedede,
+       0px 0px 0px 8px white,
+      0px 0px 0px 10px rgb(70, 68, 68);
+    }
+    &--position{
+      margin-top: 100px;
+      margin-left: 100px;
+  
+    }
+  }
+  &__text{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 30px;
+    position: relative;
+    color:#555757;
+    font-size: 25px;
+    text-align: center;
+        &::before{
+      content:"";
+      background-image: url('/img/Star_empty.svg');
+      background-size: 30px 30px;
+      width: 30px; 
+      height: 30px;
+      position: absolute;
+      display: block;
+      margin-left: 15px;
+    }
+    &::after{
+      content:"";
+      position: absolute;
+      background-image: url('/img/Star_empty.svg');
+      background-size: 30px 30px;
+      width: 30px; 
+      height: 30px;
+      margin-left: 15px;
+    }
+    &:hover{
+      color:orange;
+      font-size:28px;
+      transition: color 0.3s, font-size 0.3s ease-in-out;
+      &:after{
+        transform: rotate(360deg);
+        background-image: url('/img/Star_gold.svg');
+        transition: transform 1s ease-in-out;
+      }
+      &:before{
+        transform: rotate(360deg);
+        background-image: url('/img/Star_gold.svg');
+        transition: transform 1s ease-in-out;
+      }
+
+    }
+  }
+}

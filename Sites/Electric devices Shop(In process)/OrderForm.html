@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/btnStyle.css">
+    <title>Order Form</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="page-header__container">
+                <div class="page-header__inner">
+                    <div class="page-header__box">
+                        <p class="header__address">
+                            Tel-Aviv str. Dizengoff 205
+                        </p>
+                    </div>
+                    <a href="index.html" class="page-header__box logo logo--viev">
+                        <img src="img/logo.png" alt="logo" class="logo__img">
+                    </a>
+                    <div class="page-header__box">
+                        <ul class="user-list">
+                            <div class="user-list--viev">
+                                <li class="user-list__item">
+                                    <a href="RegisterNewUser.html" class="user-list__link"><img
+                                            src="img/header/user.svg" alt="user"></a>
+                                </li>
+                                <li class="user-list__item">
+                                    <a href="#" class="user-list__link bucket"><img src="img/header/buscket.svg"
+                                            alt="buscket">
+                                        <p class="bucket__num">1</p>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="page-nav">
+            <div class="page-nav__container">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="index.html">Home
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="AboutUs.html">About Us
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="ContactUs.html">Contact us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <main class="page-main">
+            <div class="form__wrapper">
+                <form action="OrderResults.html" class="order-form order-form--view">
+                    <div class="order-form__header-wrapper register__separator">
+                        <h1 class="order-form__header register__separator-title">Order Form</h1>
+                    </div>
+                    <div class="order-form__chooseModel--wrapper">
+                        <div class="order-form__chooseModel-text--wrapper">
+                            <label for="orderItem" class="order-form__chooseModel-text">What do you wish?</label>
+                        </div>
+                        <div class="order-form__chooseModel-drop--wrapper">
+                            <select id="orderItem" name="orderItem" class="order-form__chooseModel-list">
+                            </select>
+                        </div>
+                        <div class="order-form__chooseModel-text--wrapper">
+                            <label for="orderComment" class="order-form__chooseModel-text">Comment for your
+                                order:</label>
+                        </div>
+                        <div class="order-form__chooseModel-comment--wrapper">
+                            <textarea data-required="no" id="orderComment" class="order-form__chooseModel-comment" name="orderComment"
+                                name="textarea" rows="4" cols="40" maxlength="180">
+                             </textarea>
+                        </div>
+                    </div>
+                    <div class="billing-address--wrapper">
+                        <div class="billing-address__header-wrapper  register__separator">
+                            <h2 class="billing-address__header register__separator-title">Billing Address</h2>
+                        </div>
+                        <div class="billing-address__part-wrapper">
+                            <div class="billing-address__text--wrapper">
+                                <label for="billingFN" class="billing-address__text">First Name</label>
+                            </div>
+                            <div class="billing-address__input--wrapper">
+                                <input id="billingFN" name="billingFN" type="text" class="billing-address__input"
+                                       minlength="2" maxlength="12" data-text="text" >
+                            </div>
+                            <div class="billing-address__text--wrapper">
+                                <label for="billingStreet" class="billing-address__text"> Street Address</label>
+                            </div>
+                            <div class="billing-address__input--wrapper">
+                                <input id="billingStreet" name="billingStreet" type="text"
+                                    class="billing-address__input" minlength="2" maxlength="30">
+                            </div>
+
+                            <div class="billing-address__text--wrapper">
+                                <label for="billingLN" class="billing-address__text">Last Name</label>
+                            </div>
+                            <div class="billing-address__input--wrapper">
+                                <input id="billingLN" name="billingLN" type="text" class="billing-address__input"
+                                       minlength="2" maxlength="12" data-text="text">
+                            </div>
+                        </div>
+                        <div class="billing-address__part-wrapper">
+                            <div class="billing-address__text--wrapper">
+                                <label for="billingDist" class="billing-address__text">State or Region</label>
+                            </div>
+                            <div class="billing-address__input--wrapper">
+                                <select id="billingDist" name="billingDist" class="districts">
+                                </select>
+                            </div>
+                            <div class="billing-address__text--wrapper">
+                                <label for="billingNum" class="billing-address__text"> Phone</label>
+                            </div>
+                            <div class="billing-address__input--wrapper">
+                                <input id="billingNum" name="billingNum" type="tel" class="billing-address__input" data-Pelephone maxlength="18">
+                            </div>
+                            <div class="billing-address__text--wrapper">
+                                <label for="billingZip" class="billing-address__text">Zip</label>
+                            </div>
+                            <div class="billing-address__input--wrapper">
+                                <input id="billingZip" name="billingZip" type="number" class="billing-address__input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-address__header-wrapper  register__separator">
+                        <h2 class="delivery-address__header register__separator-title">Delivery Address</h2>
+                    </div>
+                    <div class="delivery-address__same--wrapper">
+                        <label for="delivery_checkbox" class="delivery-address__label">Same as billing address</label>
+                        <input type="checkbox" name="delivery_checkbox" class="delivery-address__same"
+                            id="delivery_checkbox">
+                    </div>
+                    <div class="delivery-address--wrapper">
+                        <div class="billing-address__part-wrapper">
+                            <div class="delivery-address__text--wrapper">
+                                <label for="deliveryFN" class="delivery-address__text">First Name</label>
+                            </div>
+                            <div class="delivery-address__input--wrapper">
+                                <input data-required="maybe" id="deliveryFN" name="deliveryFN" type="text" class="delivery-address__input"
+                                       minlength="2" maxlength="12" data-text="text">
+                            </div>
+                            <div class="delivery-address__text--wrapper">
+                                <label  for="deliveryLN" class="delivery-address__text">Last Name</label>
+                            </div>
+                            <div class="delivery-address__input--wrapper">
+                                <input data-required="maybe" id="deliveryLN" name="deliveryLN" type="text" class="delivery-address__input"
+                                       minlength="2" maxlength="12" data-text="text">
+                            </div>
+                            <div class="delivery-address__text--wrapper">
+                                <label for="deliveryStreet" class="delivery-address__text"> Street Address</label>
+                            </div>
+                            <div class="delivery-address__input--wrapper">
+                                <input data-required="maybe" id="deliveryStreet" name="deliveryStreet" type="text"
+                                    class="delivery-address__input"  minlength="2" maxlength="30">
+                            </div>
+                        </div>
+                        <div class="billing-address__part-wrapper">
+                            <div class="delivery-address__text--wrapper">
+                                <label for="deliveryDist" class="delivery-address__text">State or Region</label>
+                            </div>
+                            <div class="delivery-address__input--wrapper">
+                                <select data-required="maybe" id="deliveryDist" name="deliveryDist" class="districts">
+                                </select>
+                            </div>
+                            <div class="delivery-address__text--wrapper">
+                                <label  for="deliveryZip" class="delivery-address__text">Zip</label>
+                            </div>
+                            <div class="delivery-address__input--wrapper">
+                                <input data-required="maybe" id="deliveryZip" name="deliveryZip" type="number"
+                                    class="delivery-address__input">
+                            </div>
+                            <div class="delivery-address__text--wrapper">
+                                <label for="deliveryPhone" class="delivery-address__text"> Phone</label>
+                            </div>
+                            <div class="delivery-address__input--wrapper">
+                                <input data-required="maybe" id="deliveryPhone" name="deliveryPhone" type="tel"
+                                    class="delivery-address__input" data-Pelephone maxlength="18">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-date--wrapper">
+                        <div class="delivery-date__header--wrapper register__separator">
+                            <h2 class="delivery-date__header register__separator-title">
+                                Delivery date
+                            </h2>
+                        </div>
+                        <div class="billing-address__part-wrapper">
+                            <div class="delivery-date__text--wrapper"><label for="deliveryDay"
+                                    class="delivery-date__text">
+                                    DD
+                                </label>
+                            </div>
+                            <div class="delivery-date__pick--wrapper"><select id="deliveryDay" name="deliveryDay"
+                                    data-date="day" type="day" class="delivery-date__pick"></select></div>
+                            <div class="delivery-date__text--wrapper"><label for="deliveryMonth"
+                                    class="delivery-date__text">
+                                    MM
+                                </label>
+                            </div>
+                            <div class="delivery-date__pick--wrapper"><select id="deliveryMonth" name="deliveryMonth"
+                                    data-date="month" type="month" class="delivery-date__pick"></select></div>
+                            <div class="delivery-date__text--wrapper"><label for="deliveryYear"
+                                    class="delivery-date__text">
+                                    YY
+                                </label>
+                            </div>
+                            <div class="delivery-date__pick--wrapper"><select id="deliveryYear" name="deliveryYear"
+                                    data-date="year" type="year" class="delivery-date__pick"></select></div>
+                        </div>
+                    </div>
+
+                    <div class="payment__header--wrapper register__separator">
+                        <h2 class="payment__header register__separator-title">
+                            Payment
+                        </h2>
+                    </div>
+                    <div class="payment--wrapper">
+                        <div class="billing-address__part-wrapper">
+                            <div class="payment__text--wrapper"><label for="cardType" class="payment__text">Type of
+                                    card</label></div>
+                            <div class="payment__input--wrapper"><select id="cardType" name="cardType"
+                                    class="payment__input payment__cards-list"></select>
+                            </div>
+                            <div class="payment__text--wrapper"><label for="cardNum" class="payment__text">Card
+                                    Number</label></div>
+                            <div class="payment__input--wrapper"><input id="cardNum" name="cardNum" type="number"
+                                    class="payment__input" maxlength="16">
+                            </div>
+                            <div class="payment__text--wrapper"><label for="cardCVV" class="payment__text">CVV</label>
+                            </div>
+                            <div class="payment__input--wrapper"><input id="cardCVV" name="cardCVV" type="number"
+                                    class="payment__input" >
+                            </div>
+                        </div>
+                        <div class="billing-address__part-wrapper">
+                            <div class="payment__text--wrapper"><label for="cardDay" class="payment__text">DD</label>
+                            </div>
+                            <div class="payment__input--wrapper"><select id="cardDay" name="cardDay" data-date="day"
+                                    type="day" class="payment__input"></select></div>
+                            <div class="payment__text--wrapper"><label for="cardMonth" class="payment__text">MM</label>
+                            </div>
+                            <div class="payment__input--wrapper"><select id="cardMonth" name="cardMonth"
+                                    data-date="month" type="month" class="payment__input"></select></div>
+                            <div class="payment__text--wrapper"><label for="cardYear" class="payment__text">YY</label>
+                            </div>
+                            <div class="payment__input--wrapper"><select id="cardYear" name="cardYear" data-date="year"
+                                    type="year" class="payment__input"></select></div>
+                        </div>
+                    </div>
+                    <div class="create-account-wrapper">
+                        <div class="create-account__header--wrapper register__separator">
+                            <h2 class="create-account__header register__separator-title">
+                                Create account?
+                            </h2>
+                        </div>
+                        <div class="create-account__reapper">
+                            <div class="create-account__text--wrapper"><label for="name"
+                                    class="create-account_-text">Username</label>
+                            </div>
+                            <div class="create-account__input--wrapper"><input data-createAcc="username" id="name" type="text" name="name"
+                                    class="create-account__input"  minlength="2" maxlength="12"></div>
+                            <div class="create-account__text--wrapper"><label for="pass"
+                                    class="create-account_-text">Password</label>
+                            </div>
+                            <div class="create-account__input--wrapper"><input data-createAcc="password" id="pass" type="password" name="pass"
+                                    class="create-account__input"  minlength="8" maxlength="16"></div>
+                            <div class="create-account__text--wrapper"><label for="repass"
+                                    class="create-account_-text">Confirm
+                                    password</label>
+                            </div>
+                            <div class="create-account__input--wrapper"><input data-createAcc="repass" id="repass" type="password" name="repass"
+                                    class="create-account__input" minlength="8" maxlength="16"></div>
+                            <div class="form__submit--wrapper">
+                                <button
+                                    class="btn__inside btn__inside--shadows btn__inside--viev btn__inside--position">
+                                    <span class="btn__text">CHECKOUT</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <aside class="page-related-links">
+            Realted links
+        </aside>
+        <footer class="page-footer page-footer--viev">
+            <div class="page-footer__container">
+                <div class="page-footer__content">
+                    <ul class="page-footer-links-social page-footer-links-social--viev">
+                        <li><a class="page-footer-links-social--facebook page-footer-links-social--viev--element"
+                                href="https://www.facebook.com/"></a></li>
+                        <li><a class="page-footer-links-social--youtube page-footer-links-social--viev--element"
+                                href="https://www.youtube.com/"></a></li>
+                        <li><a class="page-footer-links-social--vk page-footer-links-social--viev--element"
+                                href="https://www.vk.com/"></a></li>
+                        <li><a class="page-footer-links-social--insta page-footer-links-social--viev--element"
+                                href="https://www.instagram.com/"></a></li>
+                    </ul>
+                    <p class="page-footer__cory-right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut,
+                        totam tempore consequatur distinctio, blanditiis hic cupiditate dolores ex sed minima veniam
+                        amet tempora ipsa quidem consectetur eveniet ratione maxime facilis.</p>
+                    <p class="page-footer__current-year">2020</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/OrderForm.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.body{
+  background-color:#fefbf6;
+}
+.form{
+display:flex;
+flex-direction: column;
+min-width: 600px;
+&__header{
+  
+  border-bottom: solid 1px black;
+  width: 100%;
+  &-text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+  }
+}
+&__content--wrapper{
+  width: 80%;
+  display: grid;
+  grid-template-columns:210px auto;
+  text-align:right;
+}
+&__datepicker{
+  display:flex;
+  margin-top: 0.5em;
+  &-text{
+    margin-top: 1em;
+    margin-right: 0.5em;
+  }
+  &-input{
+    width: 233px;
+    font-size: 1em;
+    height: 37px;
+}
+
+}
+&__search{
+  margin-top: 0.5em;
+  display:flex;
+  &-text{
+    margin-top: 1em;
+    margin-right: 0.5em;
+  }
+  &-input{
+    height: 37px;
+
+  }
+}
+  &__selectmenu{
+    margin-top: 0.5em;
+    &-text{
+      margin-top: 1em;
+      margin-right: 0.5em;
+    }
+  }
+  &__radioset{
+    margin-top: 0.5em;
+    &-text{
+      margin-top: 1em;
+      margin-right: 0.5em;
+    }
+  }
+  &__checkbox{
+    margin-top: 0.5em;
+    &-text{
+      margin-top: 1em;
+      margin-right: 0.5em;
+    }
+}
+&__button{
+  margin-top: 0.5em;
+  width: 310px;
+}
+}
+
+.checkbox{
+  right:0px;
+  left:0px;
+}
+
+.mytoggles{
+  display: flex;
+}
+.ui-button{
+  margin-right: 0em;
+}
+  .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 2px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-bottom-left-radius: 2px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 2px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 2px;
+}
+
+body{
+  font-family: "Trebuchet MS", sans-serif;
+  margin: 50px;
+}
+.demoHeaders {
+  margin-top: 2em;
+}
+.ui-widget{
+  text-align: left;
+}
+.ui-selectmenu-button.ui-button{
+  width: 10em;
+}
+.ui-selectmenu-text{
+  font-weight: 600;
+  font-size: 16px;
+}
+.ui-selectmenu-button.ui-button{
+  margin-top: 0.5em;
+}

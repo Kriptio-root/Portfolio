@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<!-- labe=label
+span=.label -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/jquery-ui.css">
+  <link rel="stylesheet" href="./css/jquery-ui.theme.css">
+  <link rel="stylesheet" href="./css/jquery-ui.structure.css">
+  <title>ToDo List</title>
+</head>
+
+<body>
+  <div class="todo todo--viev">
+    <section class="todo__list " id="todo">
+      <section>
+        <div class="addTask__wrapper">
+          <input class="addTask__input" type="text">
+          <label class="addTask__label" for=""></label>
+          <button class="addTask__btn">Add new task</button>
+        </div>
+      </section>
+      <h1 class="todo__header">To Be Done</h1>
+      <div class="todo__item hidden">
+        <input class="todo__input todo__input--hidden undone" type="checkbox" id="do0">
+        <label class="todo__label todo__label--viev" for="do0">
+          <span class="todo__text">Zero One</span>
+          <i class="fas fa-check"></i>
+          <button type="submit" class="delete-btn"><img src="/img/delete_icon.png"></button>
+        </label>
+      </div>
+      <div class="todo__item">
+        <input class="todo__input todo__input--hidden undone" type="checkbox" id="do1">
+        <label class="todo__label todo__label--viev" for="do1">
+          <span class="todo__text">Prepare for Session</span>
+          <i class="fas fa-check"></i>
+          <button type="submit" class="delete-btn"><img src="/img/delete_icon.png"></button>
+        </label>
+      </div>
+      <div class="todo__item ">
+        <input class="todo__input todo__input--hidden undone" type="checkbox" id="do2">
+        <label class="todo__label todo__label--viev" for="do2">
+          <i class="fas fa-check"></i>
+          <span class="todo__text">Assign Tasks</span>
+          <button type="submit" class="delete-btn"><img src="/img/delete_icon.png"></button>
+        </label>
+      </div>
+      <div class="todo__item ">
+        <input class="todo__input todo__input--hidden undone" type="checkbox" id="do3">
+        <label class="todo__label todo__label--viev" for="do3">
+          <i class="fas fa-check"></i>
+          <span class="todo__text">Be there on time</span>
+          <button type="submit" class="delete-btn"><img src="/img/delete_icon.png"></button>
+        </label>
+      </div>
+      <div class="todo__item">
+        <input class="todo__input todo__input--hidden undone" type="checkbox" id="do4">
+        <label class="todo__label todo__label--viev todo__label--last-one" for="do4">
+          <span class="todo__text">Start Session</span>
+          <i class="fas fa-check"></i>
+          <button type="submit" class="delete-btn"><img src="/img/delete_icon.png"></button>
+        </label>
+      </div>
+    </section>
+    <section class="todo__list" id="done">
+      <h1 class="todo__header">Completed Tasks</h1>
+      <div class="todo__item">
+        <input class="todo__input todo__input--hidden done" type="checkbox" id="done1" checked>
+        <label class="todo__label todo__label-done todo__label--viev" for="done1">
+          <span class="todo__text">Prepare for Session</span>
+          <i class="fas fa-check"></i>
+          <button type="submit" class="delete-btn"><img src="/img/delete_icon.png"></button>
+        </label>
+      </div>
+      <div class="todo__item ">
+        <input class="todo__input todo__input--hidden done" type="checkbox" id="done2" checked>
+        <label class="todo__label todo__label-done todo__label--viev" for="done2">
+          <i class="fas fa-check"></i>
+          <span class="todo__text">Assign Tasks</span>
+          <button type="submit" class="delete-btn"><img src="/img/delete_icon.png"></button>
+        </label>
+      </div>
+      <div class="todo__item ">
+        <input class="todo__input todo__input--hidden done" type="checkbox" id="done3" checked>
+        <label class="todo__label todo__label-done todo__label--viev" for="done3">
+          <i class="fas fa-check"></i>
+          <span class="todo__text">Be there on time</span>
+          <button type="submit" class="delete-btn"><img src="/img/delete_icon.png"></button>
+        </label>
+      </div>
+      <div class="todo__item">
+        <input class="todo__input todo__input--hidden done" type="checkbox" id="done4" checked>
+        <label class="todo__label todo__label-done todo__label--viev todo__label--last-one" for="done4">
+          <span class="todo__text">Start Session</span>
+          <i class="fas fa-check"></i>
+          <button type="submit" class="delete-btn"><img src="/img/delete_icon.png"></button>
+        </label>
+      </div>
+    </section>
+  </div>
+  <script src="./jQuery/jquery.js"></script>
+  <script src="./jQuery/jquery-ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

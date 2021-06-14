@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset=utf-8>
+  <title>StarTrackr!</title>
+
+  <link rel="stylesheet" href="base.css" media="screen">
+  <link rel="stylesheet" href="./css/dragdrop.css" media="screen">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    #photo-grid img {
+      width: 100px;
+    }
+  </style>
+
+</head>
+
+<body class="task2">
+  <!-- <div id="puff"> </div> -->
+  <section id="container">
+    <header id="header">
+      <h1>**************</h1>
+    </header>
+    <div id="content">
+      <h2>Images</h2>
+
+      <div id="trash" class="trash ui-widget-content ui-state-default">
+        <img src="./images/trash.png" alt="trash" />
+        <span id="trash-title">Drag images here to delete</span>
+        <div id="puff"> </div>
+      </div>
+      <div id="photo-grid">
+        <img class="pic" src="./images/fader_100.jpg" />
+        <img class="pic" src="./images/beau_100.jpg" />
+        <img class="pic" src="./images/glenda_100.jpg" />
+        <img class="pic" src="./images/mofat_100.jpg" />
+      </div>
+    </div>
+
+    <footer id="footer">
+      <p>
+
+      </p>
+    </footer>
+  </section>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    // There's the gallery and the trash
+    var $gallery = $("#photo-grid"),
+      $trash = $("#trash");
+    // Let the gallery items be draggable
+    $("img", $gallery).draggable({
+      cancel: "a.ui-icon", // clicking an icon won't initiate dragging
+      revert: "invalid", // when not dropped, the item will revert back to its initial position
+      containment: "document",
+      helper: "clone",
+      cursor: "move"
+    });
+    $trash.droppable({
+      accept: "#photo-grid > img",
+      classes: {
+        "ui-droppable-active": "ui-state-highlight"
+      },
+      drop: function (event, ui) {
+        deleteImage(ui.draggable);
+      }
+    });
+    // Let the gallery be droppable as well, accepting items from the trash
+    $gallery.droppable({
+      accept: "#trash img",
+      classes: {
+        "ui-droppable-active": "custom-state-active"
+      },
+      drop: function (event, ui) {
+        recycleImage(ui.draggable);
+      }
+    });
+    /////////////////////
+    var frame = 0;
+      var frame_width = 120;
+      var bgPosition = {
+        x: 0,
+        y: 622
+      };
+      var loop;
+
+      // function changeFrames() {
+      //   frame += 1;
+      //   document.getElementById("puff").style.display = "hidden"
+      //   $('#puff').css('background-position', bgPosition.x + 'px ' + bgPosition.y + 'px');
+      //   //console.log($('#puff').css('background-position', bgPosition.x + 'px ' + bgPosition.y + 'px'));
+      //   bgPosition.y = bgPosition.y - 125;
+      //   if (frame == 5){
+      //    clearInterval(loop)
+      //    document.getElementById("puff").style.display = "none"; 
+      //   };
+      // }
+
+      // $(document).ready(function () {
+      //   loop = setInterval(changeFrames, 200);
+      // });
+    ////////////////////
+    //IMAGE DELEATE FUNC
+    function deleteImage($item) {
+      $item.fadeOut(function () {
+        var $list = $("img", $trash).length ?
+          $("ul", $trash) :
+          $("<ul class='gallery ui-helper-reset'/>").appendTo($trash);
+      });
+      function changeFrames() {
+        frame += 1;
+        document.getElementById("puff").style.display = "block"
+        $('#puff').css('background-position', bgPosition.x + 'px ' + bgPosition.y + 'px');
+        //console.log($('#puff').css('background-position', bgPosition.x + 'px ' + bgPosition.y + 'px'));
+        bgPosition.y = bgPosition.y - 125;
+        if (frame == 5){
+          frame=0;
+         clearInterval(loop)
+         document.getElementById("puff").style.display = "none"; 
+        };
+      }
+
+      $(document).ready(function () {
+        loop = setInterval(changeFrames, 200);
+      });
+    }
+      // $("<div>", {
+      //     id: "puff",
+      //     style: "display: none;"
+      //   })
+      //   .appendTo("body")
+      //   .position({
+      //     my: "center",
+      //     at: "center",
+      //     of: $trash
+      //   })
+      //   .fadeIn("fast")
+      //   .delay(10)
+      //   .fadeOut("slow", function() {
+      //     $item.remove();
+      //     $(this).remove();
+      //   });
+    
+        // $("<div>", {
+      //     id: "puff",
+      //     style: "display: none;"
+      //   })
+      //   .appendTo("body")
+      //   .position({
+      //     my: "center",
+      //     at: "center",
+      //     of: $trash
+      //   })
+      //   .fadeIn("fast")
+      //   .delay(10)
+      //   .fadeOut("slow", function() {
+      //     $item.remove();
+      //     $(this).remove();
+      //   });
+
+  </script>
+</body>
+
+</html>

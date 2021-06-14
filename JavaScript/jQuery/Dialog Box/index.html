@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<script src="jQuery.js"></script>
+	<script src="jquery-ui.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<p>
+	<button id="dialog-link" class="ui-button ui-corner-all ui-widget">
+		Open Dialog
+	</button>
+</p>
+
+
+<!-- ui-dialog -->
+<div id="dialog" title="Redirect to associated payment?">
+	<p>This load was paid on delivery.If load is updated successfully would you like to be redirected to the payment creation screen?</p>
+</div>
+
+
+<script>
+	$( "#dialog" ).dialog({
+	autoOpen: false,
+	modal: true,
+	"open": function () {
+$(".ui-widget-overlay").click(function(){
+$("#dialog").dialog("close");
+});
+},
+	width: 400,
+	buttons: [
+		{
+			text: "Yes",
+			click: function() {
+				$( this ).dialog( "close" );
+				$(".wrapper").removeClass("ui-widget-overlay"); 
+				$("#dialog-link").removeClass("ui-button-clicked");},
+		},
+		{
+			text: "No",
+			click: function() {
+				$( this ).dialog( "close" );
+				$(".wrapper").removeClass("ui-widget-overlay"); 
+				$("#dialog-link").removeClass("ui-button-clicked");},
+			
+		}
+	]
+});
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+    "kite.enableOptionalCompletionsTriggers": true,
+    "files.autoSave": "afterDelay"
+}

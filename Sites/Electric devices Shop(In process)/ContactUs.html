@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpAuH6WXYV0YD-DOQoA9mHYhGKLUgZ8Vs&callback=initMap&libraries=&v=weekly"
+            defer></script>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: -34.397,
+                    lng: 150.644
+                },
+                zoom: 8,
+            });
+        }
+    </script>
+    <title>About Us</title>
+</head>
+
+<body>
+<div class="page-container page-container--contactus">
+    <header class="page-header">
+        <div class="page-header__container">
+            <div class="page-header__inner">
+                <div class="page-header__box">
+                    <p class="header__address">
+                        Tel-Aviv str. Dizengoff 205
+                    </p>
+                </div>
+                <a href="index.html" class="page-header__box logo logo--viev">
+                    <img src="img/logo.png" alt="logo" class="logo__img">
+                </a>
+                <div class="page-header__box">
+                    <ul class="user-list">
+                        <div class="user-list--viev">
+                            <li class="user-list__item">
+                                <a href="RegisterNewUser.html" class="user-list__link"><img src="img/header/user.svg" alt="user"></a>
+                            </li>
+                            <li class="user-list__item">
+                                <a href="#" class="user-list__link bucket"><img src="img/header/buscket.svg"
+                                                                                alt="buscket">
+                                    <p class="bucket__num">1</p>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="page-nav">
+        <div class="page-nav__container">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="index.html">Home
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="AboutUs.html">About Us
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="ContactUs.html">Contact us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <main class="page-main">
+        <div class="form-wrapper">
+            <form class="contactus contactus--decor">
+                <div class="contactus__inner">
+                    <div class="contactus__inner-header--wrapper">
+                        <h3 clas="contactus__inner-header">Contact us</h3>
+                    </div>
+                    <input class="contactus__inner-item contactus__inner-username" type="text"
+                           placeholder="Username">
+                    <input class="contactus__inner-item contactus__inner-email" type="email" placeholder="Email">
+                    <textarea class="contactus__inner-item contactus__inner-textarea" placeholder="Message..."
+                              rows="3"></textarea>
+                    <input class="contactus__inner-item contactus__inner-submit" type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </main>
+    <aside class="page-related-links">
+        Realted links
+    </aside>
+    <footer class="page-footer page-footer--viev">
+        <div class="page-footer__container">
+            <div class="page-footer__content">
+                <ul class="page-footer-links-social page-footer-links-social--viev">
+                    <li><a class="page-footer-links-social--facebook page-footer-links-social--viev--element"
+                           href="https://www.facebook.com/"></a></li>
+                    <li><a class="page-footer-links-social--youtube page-footer-links-social--viev--element"
+                           href="https://www.youtube.com/"></a></li>
+                    <li><a class="page-footer-links-social--vk page-footer-links-social--viev--element"
+                           href="https://www.vk.com/"></a></li>
+                    <li><a class="page-footer-links-social--insta page-footer-links-social--viev--element"
+                           href="https://www.instagram.com/"></a></li>
+                </ul>
+                <p class="page-footer__cory-right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut,
+                    totam tempore consequatur distinctio, blanditiis hic cupiditate dolores ex sed minima veniam
+                    amet tempora ipsa quidem consectetur eveniet ratione maxime facilis.</p>
+                <p class="page-footer__current-year">2020</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>

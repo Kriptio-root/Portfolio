@@ -1,0 +1,45 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.body {
+  background-color: #494981;
+  height: 100vh;
+  width: 97vw;
+}
+
+.gallery__header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+}
+
+.gallery__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.gallery__image {
+  float: left;
+  padding: 10px;
+  border: solid 1px #1b2d5e;
+  background-color: white;
+  margin: 0 30px 30px 0;
+}
+
+.gallery__image:hover {
+  border-color: red;
+  background-color: #cccccc;
+}
+/*# sourceMappingURL=style.css.map */

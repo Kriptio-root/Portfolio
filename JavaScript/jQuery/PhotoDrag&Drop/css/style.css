@@ -1,0 +1,64 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.body {
+  background-color: #fefbf6;
+}
+
+.rainbow-line {
+  width: 1000px;
+  height: 70px;
+}
+
+.rainbow-line--green {
+  background-color: green;
+}
+
+.rainbow-line--blue {
+  background-color: blue;
+}
+
+.rainbow-line--orange {
+  background-color: orange;
+}
+
+.rainbow-line--pink {
+  background-color: pink;
+}
+
+.rainbow-line--yellow {
+  background-color: yellow;
+}
+
+.rainbow-line--red {
+  background-color: red;
+}
+
+.rainbow-line--purple {
+  background-color: purple;
+}
+
+.task2 {
+  background-color: #5c98aa;
+}
+
+#puff {
+  background-image: url("/images/epuff.png");
+  height: 120px;
+  width: 128px;
+  display: block;
+  position: relative;
+  left: 30%;
+  bottom: 40px;
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

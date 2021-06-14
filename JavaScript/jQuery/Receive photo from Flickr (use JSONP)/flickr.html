@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/style.css">
+<title>Flickr Feed</title>
+
+<!-- Put jQuery here -->
+<script src="./jQuery/jquery.js"></script>
+<script>
+$(document).ready(function() {
+			
+}); // end ready
+var galurl="https://api.flickr.com/services/feeds/photos_public.gne?";
+  
+var id="id=191585345@N08";
+var src;
+$.getJSON(galurl + id+"&lang=en-us&format=json&jsoncallback=?", function(data){
+    $.each(data.items, function( i, item ){
+		$( "<img>" ).attr( "src", item.media.m ).appendTo( "#photos" );
+		//console.log(data.items.length);
+		if ( i == (data.items.length) ) 
+		return false;
+    });
+});
+////////////
+
+$(document).ready(function(){
+    $("form").on("submit", function(event){
+        event.preventDefault();
+ 
+        var formValues= $(this).serialize();
+ 
+        $.post("process_form.php", formValues, function(data){
+            // Display the returned data in browser
+            $("#result").html(data);
+        });
+    });
+});
+
+</script>
+</head>
+<body class="body">
+<div class="gallery__wrapper">
+	<header class="gallery__header">
+    Flickr Gallery
+</header>
+	<div class="gallery__content">
+		<div class="gallery__main">
+			<h1 class="gallery__title">Flickr Images</h1>
+		<div id="photos" class="gallery__image"></div>
+        <br class="clearLeft">
+		</div>
+	</div>
+	<footer>
+    
+</footer>
+</div>
+</body>
+</html>

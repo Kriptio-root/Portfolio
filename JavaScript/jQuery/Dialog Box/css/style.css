@@ -1,0 +1,17 @@
+* {
+  outline: none;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  background: transparent;
+  border: none;
+}
+
+.body {
+  opacity: 5;
+}
+
+.ui-button-clicked {
+  opacity: 0;
+}
+/*# sourceMappingURL=style.css.map */

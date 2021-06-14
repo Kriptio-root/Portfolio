@@ -1,0 +1,57 @@
+@import'buttons.css';
+
+body {
+  /* изображение для фона */
+  background-repeat: no-repeat;
+  /* запрещаем повтор изображения */
+  background-attachment: fixed;
+  /* фиксируем изображение */
+  background-color: khaki;
+  /* задаем фон, если изображения на странице отключены */
+  text-align: left;
+
+
+}
+
+p {
+  margin: 25px 10px 20px 15px;
+  font-weight: 800;
+
+}
+
+.number {
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+
+
+
+.text {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 8px;
+  ;
+  padding: 10px;
+}
+
+#tip {
+  background-color: forestgreen;
+  margin-right: 1300px;
+  margin-left: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+}
+
+#content {
+  background-color: darkgreen;
+  margin: 5px 1300px 8px 5px;
+  /*po chasovoi strelke */
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+}
+
+#percent {
+  margin-left: 15px;
+}

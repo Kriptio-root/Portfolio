@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./css/validation/cmxformTemplate.css">
+    <link rel="stylesheet" href="./css/validation/cmxform.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="page-header__container">
+                <a href=# class="logo logo--viev">
+                    <img src="img/logo.png" alt="logo" class="logo__img">
+                </a>
+            </div>
+        </header>
+        <nav class="page-nav">
+            <div class="page-nav__container">
+                <nav class="menu">
+
+                </nav>
+            </div>
+        </nav>
+        <main class="page-main">
+            <div class="form-wrapper">
+                <form class="contactus contactus--decor" name="form" id="form">
+                    <div class="contactus__inner">
+                        <div class="contactus__inner-header--wrapper">
+                        <h3 clas="contactus__inner-header">Написать нам</h3>
+                    </div>
+                        <input class="contactus__inner-item contactus__inner-username" type="text"
+                            placeholder="name" name="name" id="name">
+                        <input class="contactus__inner-item contactus__inner-email" type="email" placeholder="E-mail" name="email" id="email">
+                        <textarea class="contactus__inner-item contactus__inner-textarea" placeholder="Description"
+                            rows="3" name="Description" id="Description"></textarea>
+                        <input class="contactus__inner-item contactus__inner-submit" type="submit" value="Отправить">
+                    </div>
+                </form>
+               
+            </div>
+            <div id="result"></div>
+        </main>
+        <aside class="page-related-links">
+            Realted links
+        </aside>
+        <footer class="page-footer page-footer--viev">
+            <div class="page-footer__container">
+                <div class="page-footer__content">
+                    <ul class="page-footer-links-social page-footer-links-social--viev">
+                        <li><a class="page-footer-links-social--facebook page-footer-links-social--viev--element"
+                                href="https://www.facebook.com/"></a></li>
+                        <li><a class="page-footer-links-social--youtube page-footer-links-social--viev--element"
+                                href="https://www.youtube.com/"></a></li>
+                        <li><a class="page-footer-links-social--vk page-footer-links-social--viev--element"
+                                href="https://www.vk.com/"></a></li>
+                        <li><a class="page-footer-links-social--insta page-footer-links-social--viev--element"
+                                href="https://www.instagram.com/"></a></li>
+                    </ul>
+                    <p class="page-footer__cory-right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut,
+                        totam tempore consequatur distinctio, blanditiis hic cupiditate dolores ex sed minima veniam
+                        amet tempora ipsa quidem consectetur eveniet ratione maxime facilis.</p>
+                    <p class="page-footer__currnt-year">2020</p>
+                </div>
+            </div>
+    </div>
+    </footer>
+    </div>
+    <script src="./jQuery/validation/dist/jquery.validate.js"></script>
+    <script src="./js/validation.js"></script>
+    <script>
+
+$(document).ready(function(){
+    $("#form").on("submit", function(event){
+        event.preventDefault();
+ 
+        var formValues= $(this).serialize();
+ 
+        $.post("process_form.php", formValues, function(data){
+            // Display the returned data in browser
+            console.log(data);
+            alert(data);
+            $("#result").html(data);
+           
+        });
+    });
+});
+
+    </script>
+</body>
+
+</html>

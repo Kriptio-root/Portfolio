@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
+
+<body class="body">
+	<div class="page page--viev">
+		<div class="page-header page-header--viev">Dynamic page</div>
+		<nav class="page-nav page-nav--viev">
+			<div class="page-nav__button-wrapper">
+				<button class="page-nav__button page-nav__button--home"><span
+						class="page-nav__button-text">Home</span></button>
+				<button class="page-nav__button page-nav__button--about"><span
+						class="page-nav__button-text">About</span></button>
+				<button class="page-nav__button page-nav__button--contact">Contact</button>
+				<!-- <span class="page-nav__button-text"></span> -->
+			</div>
+		</nav>
+		<div class="page__content">
+
+		</div>
+	</div>
+	<script>
+		 $('.page__content').load('Home.html');
+		$('.page-nav__button').click(function (cur) {
+			$('.page-nav__button').removeClass('selected');
+			$(this).addClass('selected');
+			var cur = $(".selected").text();
+			 console.log(cur);
+		$('.page__content').load(cur+'.html');
+		});
+	</script>
+</body>
+
+</html>

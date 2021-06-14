@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
+
+<body>
+
+	<div class="sortableContainer" id="section">
+		<div class="rainbow-line rainbow-line--green"><span>Draggable anywhere in this div</span><br /><br /></div>
+		<div class="rainbow-line rainbow-line--blue"><span>Draggable only horizontally</span><br /><br /></div>
+		<div class="rainbow-line rainbow-line--orange"><span>Draggable only horizontally</span><br /><br /></div>
+		<div class="rainbow-line rainbow-line--pink" ><span>Draggable only horizontally</span><br /><br /></div>
+		<div class="rainbow-line rainbow-line--yellow" ><span>Draggable only horizontally</span><br /><br /></div>
+		<div class="rainbow-line rainbow-line--red" ><span>Draggable only horizontally</span><br /><br /></div>
+		<div class="rainbow-line rainbow-line--purple" ><span>Draggable only horizontally</span><br /><br /></div>
+	</div>
+
+	<script>
+		$( ".sortableContainer" ).sortable({
+  appendTo: document.body
+});
+$( ".rainbow-line" ).sortable({
+			axis: "y",
+			helper: 'clone',
+			connectToSortable: 'sortableContainer'
+});
+	</script>
+</body>
+
+</html>

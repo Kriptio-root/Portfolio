@@ -1,0 +1,95 @@
+body {
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px grid-template-rows: repeat(3, 100px);
+  grid-auto-rows: minmax(100px, auto);
+  height: 100vh;
+  width: 100vw;
+}
+
+.page-header {
+  text-align: center;
+  background-color: blue;
+  grid-row: 1;
+  grid-column: 1/4;
+
+
+}
+
+.page-footer {
+  text-align: center;
+  background-color: greenyellow;
+  grid-row: 3;
+  grid-column: 1/4;
+
+}
+
+.page-nav {
+  text-align: center;
+  background-color: orange;
+  grid-column: 1;
+  grid-row: 2;
+
+}
+
+.page-main {
+  padding: 0 20px 0 20px;
+  background-color: rgb(156, 38, 38);
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.page-related-links {
+  text-align: center;
+  background-color: violet;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+@media only screen and (max-width: 768px) {
+  grid-template-rows: repeat(6, minmax(25%, 100%));
+
+  .page-header {
+    text-align: center;
+    background-color: blue;
+    grid-row: 1/2;
+    grid-column: 1/4;
+
+  }
+
+  .page-footer {
+    text-align: center;
+    background-color: greenyellow;
+    grid-row: 5;
+    grid-column: 1/4;
+
+  }
+
+  .page-nav {
+    text-align: center;
+    background-color: orange;
+    grid-row: 2;
+    grid-column: 1/4;
+
+  }
+
+  .page-main {
+    padding: 0 20px 0 20px;
+    background-color: rgb(156, 38, 38);
+    grid-row: 3;
+    grid-column: 1/4;
+  }
+
+  .page-related-links {
+    text-align: center;
+    background-color: violet;
+    grid-row: 4;
+    grid-column: 1/4;
+  }
+
+}
